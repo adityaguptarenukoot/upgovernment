@@ -191,7 +191,7 @@ function App() {
                     data={totalPieData}
                     cx="40%"
                     cy="50%"
-                    outerRadius={80}
+                    outerRadius={75}
                     dataKey="value"
                     label={renderCustomLabel}
                     labelLine={false}
@@ -222,7 +222,7 @@ function App() {
                     data={inLanePieData}
                     cx="40%"
                     cy="50%"
-                    outerRadius={80}
+                    outerRadius={75}
                     dataKey="value"
                     label={renderCustomLabel}
                     labelLine={false}
@@ -253,7 +253,7 @@ function App() {
                     data={outLanePieData}
                     cx="40%"
                     cy="50%"
-                    outerRadius={80}
+                    outerRadius={75}
                     dataKey="value"
                     label={renderCustomLabel}
                     labelLine={false}
