@@ -181,7 +181,7 @@ function Dashboard() {
                     data={totalPieData}
                     cx="40%"
                     cy="50%"
-                    outerRadius={55}
+                    outerRadius={52}
                     dataKey="value"
                     label={renderCustomLabel}
                     labelLine={false}
@@ -211,7 +211,7 @@ function Dashboard() {
                     data={inLanePieData}
                     cx="40%"
                     cy="50%"
-                    outerRadius={55}
+                    outerRadius={52}
                     dataKey="value"
                     label={renderCustomLabel}
                     labelLine={false}
@@ -241,7 +241,7 @@ function Dashboard() {
                     data={outLanePieData}
                     cx="40%"
                     cy="50%"
-                    outerRadius={55}
+                    outerRadius={52}
                     dataKey="value"
                     label={renderCustomLabel}
                     labelLine={false}
