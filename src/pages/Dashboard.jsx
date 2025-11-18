@@ -147,8 +147,8 @@ function Dashboard() {
           </button>
         </div>
 
-        <div className="flex-1 grid grid-cols-3 gap-4">
-          <div className="col-span-2 bg-white rounded border border-gray-300 relative">
+        <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="lg:col-span-2 bg-white rounded border border-gray-300 relative">
             {videoFile ? (
               <>
                 <video
@@ -172,8 +172,8 @@ function Dashboard() {
             )}
           </div>
 
-          <div className="grid grid-rows-4 gap-4">
-            <div className="bg-white rounded border border-gray-300 p-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
+            <div className="bg-white rounded border border-gray-300 p-3 h-48 md:h-auto">
               <h3 className="text-gray-800 text-sm font-semibold mb-1">Total Vehicles</h3>
               <ResponsiveContainer width="100%" height="90%">
                 <PieChart>
@@ -203,7 +203,7 @@ function Dashboard() {
               </ResponsiveContainer>
             </div>
 
-            <div className="bg-white rounded border border-gray-300 p-3">
+            <div className="bg-white rounded border border-gray-300 p-3 h-48 md:h-auto">
               <h3 className="text-gray-800 text-sm font-semibold mb-1">IN Lane</h3>
               <ResponsiveContainer width="100%" height="90%">
                 <PieChart>
@@ -233,7 +233,7 @@ function Dashboard() {
               </ResponsiveContainer>
             </div>
 
-            <div className="bg-white rounded border border-gray-300 p-3">
+            <div className="bg-white rounded border border-gray-300 p-3 h-48 md:h-auto">
               <h3 className="text-gray-800 text-sm font-semibold mb-1">OUT Lane</h3>
               <ResponsiveContainer width="100%" height="90%">
                 <PieChart>
@@ -263,7 +263,7 @@ function Dashboard() {
               </ResponsiveContainer>
             </div>
 
-            <div className="bg-white rounded border border-gray-300 p-3">
+            <div className="bg-white rounded border border-gray-300 p-3 h-48 md:h-auto">
               <h3 className="text-gray-800 text-sm font-semibold mb-1">Traffic Rate/Min</h3>
               <ResponsiveContainer width="100%" height="90%">
                 <BarChart data={barData}>
