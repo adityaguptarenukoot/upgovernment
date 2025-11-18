@@ -147,8 +147,8 @@ function Dashboard() {
           </button>
         </div>
 
-        <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div className="lg:col-span-2 bg-white rounded border border-gray-300 relative">
+        <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="lg:col-span-2 bg-white rounded border border-gray-300 relative min-h-0">
             {videoFile ? (
               <>
                 <video
@@ -172,114 +172,122 @@ function Dashboard() {
             )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
-            <div className="bg-white rounded border border-gray-300 p-3 h-48 md:h-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 min-h-0 overflow-auto">
+            <div className="bg-white rounded border border-gray-300 p-3 h-48 md:h-64 lg:h-auto lg:min-h-[200px]">
               <h3 className="text-gray-800 text-sm font-semibold mb-1">Total Vehicles</h3>
-              <ResponsiveContainer width="100%" height="90%">
-                <PieChart>
-                  <Pie
-                    data={totalPieData}
-                    cx="40%"
-                    cy="50%"
-                    outerRadius={52}
-                    dataKey="value"
-                    label={renderCustomLabel}
-                    labelLine={false}
-                    isAnimationActive={false}
-                  >
-                    {totalPieData.map((entry, index) => (
-                      <Cell key={index} fill={entry.color} />
-                    ))}
-                  </Pie>
-                  <Legend 
-                    layout="vertical"
-                    verticalAlign="middle"
-                    align="right"
-                    iconType="circle" 
-                    iconSize={10}
-                    wrapperStyle={{ fontSize: '15px', paddingLeft: '0px', paddingRight: '5px' }}
-                  />
-                </PieChart>
-              </ResponsiveContainer>
+              <div className="h-[calc(100%-24px)]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Pie
+                      data={totalPieData}
+                      cx="40%"
+                      cy="50%"
+                      outerRadius={52}
+                      dataKey="value"
+                      label={renderCustomLabel}
+                      labelLine={false}
+                      isAnimationActive={false}
+                    >
+                      {totalPieData.map((entry, index) => (
+                        <Cell key={index} fill={entry.color} />
+                      ))}
+                    </Pie>
+                    <Legend 
+                      layout="vertical"
+                      verticalAlign="middle"
+                      align="right"
+                      iconType="circle" 
+                      iconSize={10}
+                      wrapperStyle={{ fontSize: '15px', paddingLeft: '0px', paddingRight: '5px' }}
+                    />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
             </div>
 
-            <div className="bg-white rounded border border-gray-300 p-3 h-48 md:h-auto">
+            <div className="bg-white rounded border border-gray-300 p-3 h-48 md:h-64 lg:h-auto lg:min-h-[200px]">
               <h3 className="text-gray-800 text-sm font-semibold mb-1">IN Lane</h3>
-              <ResponsiveContainer width="100%" height="90%">
-                <PieChart>
-                  <Pie
-                    data={inLanePieData}
-                    cx="40%"
-                    cy="50%"
-                    outerRadius={52}
-                    dataKey="value"
-                    label={renderCustomLabel}
-                    labelLine={false}
-                    isAnimationActive={false}
-                  >
-                    {inLanePieData.map((entry, index) => (
-                      <Cell key={index} fill={entry.color} />
-                    ))}
-                  </Pie>
-                  <Legend 
-                    layout="vertical"
-                    verticalAlign="middle"
-                    align="right"
-                    iconType="circle" 
-                    iconSize={10}
-                    wrapperStyle={{ fontSize: '15px', paddingLeft: '5px' }}
-                  />
-                </PieChart>
-              </ResponsiveContainer>
+              <div className="h-[calc(100%-24px)]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Pie
+                      data={inLanePieData}
+                      cx="40%"
+                      cy="50%"
+                      outerRadius={52}
+                      dataKey="value"
+                      label={renderCustomLabel}
+                      labelLine={false}
+                      isAnimationActive={false}
+                    >
+                      {inLanePieData.map((entry, index) => (
+                        <Cell key={index} fill={entry.color} />
+                      ))}
+                    </Pie>
+                    <Legend 
+                      layout="vertical"
+                      verticalAlign="middle"
+                      align="right"
+                      iconType="circle" 
+                      iconSize={10}
+                      wrapperStyle={{ fontSize: '15px', paddingLeft: '5px' }}
+                    />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
             </div>
 
-            <div className="bg-white rounded border border-gray-300 p-3 h-48 md:h-auto">
+            <div className="bg-white rounded border border-gray-300 p-3 h-48 md:h-64 lg:h-auto lg:min-h-[200px]">
               <h3 className="text-gray-800 text-sm font-semibold mb-1">OUT Lane</h3>
-              <ResponsiveContainer width="100%" height="90%">
-                <PieChart>
-                  <Pie
-                    data={outLanePieData}
-                    cx="40%"
-                    cy="50%"
-                    outerRadius={52}
-                    dataKey="value"
-                    label={renderCustomLabel}
-                    labelLine={false}
-                    isAnimationActive={false}
-                  >
-                    {outLanePieData.map((entry, index) => (
-                      <Cell key={index} fill={entry.color} />
-                    ))}
-                  </Pie>
-                  <Legend 
-                    layout="vertical"
-                    verticalAlign="middle"
-                    align="right"
-                    iconType="circle" 
-                    iconSize={10}
-                    wrapperStyle={{ fontSize: '15px', paddingLeft: '5px' }}
-                  />
-                </PieChart>
-              </ResponsiveContainer>
+              <div className="h-[calc(100%-24px)]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Pie
+                      data={outLanePieData}
+                      cx="40%"
+                      cy="50%"
+                      outerRadius={52}
+                      dataKey="value"
+                      label={renderCustomLabel}
+                      labelLine={false}
+                      isAnimationActive={false}
+                    >
+                      {outLanePieData.map((entry, index) => (
+                        <Cell key={index} fill={entry.color} />
+                      ))}
+                    </Pie>
+                    <Legend 
+                      layout="vertical"
+                      verticalAlign="middle"
+                      align="right"
+                      iconType="circle" 
+                      iconSize={10}
+                      wrapperStyle={{ fontSize: '15px', paddingLeft: '5px' }}
+                    />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
             </div>
 
-            <div className="bg-white rounded border border-gray-300 p-3 h-48 md:h-auto">
+            <div className="bg-white rounded border border-gray-300 p-3 h-48 md:h-64 lg:h-auto lg:min-h-[200px]">
               <h3 className="text-gray-800 text-sm font-semibold mb-1">Traffic Rate/Min</h3>
-              <ResponsiveContainer width="100%" height="90%">
-                <BarChart data={barData}>
-                  <XAxis dataKey="type" stroke="#374151" style={{ fontSize: '10px' }} />
-                  <YAxis stroke="#374151" style={{ fontSize: '10px' }} />
-                  <Bar dataKey="rate" fill="#8b5cf6" isAnimationActive={false} />
-                  <Legend 
-                    layout="vertical"
-                    verticalAlign="middle"
-                    align="right"
-                    iconType="square" 
-                    iconSize={10}
-                    wrapperStyle={{ fontSize: '15px', paddingLeft: '5px' }}
-                  />
-                </BarChart>
-              </ResponsiveContainer>
+              <div className="h-[calc(100%-24px)]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={barData}>
+                    <XAxis dataKey="type" stroke="#374151" style={{ fontSize: '10px' }} />
+                    <YAxis stroke="#374151" style={{ fontSize: '10px' }} />
+                    <Bar dataKey="rate" fill="#8b5cf6" isAnimationActive={false} />
+                    <Legend 
+                      layout="vertical"
+                      verticalAlign="middle"
+                      align="right"
+                      iconType="square" 
+                      iconSize={10}
+                      wrapperStyle={{ fontSize: '15px', paddingLeft: '5px' }}
+                    />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
             </div>
           </div>
         </div>
